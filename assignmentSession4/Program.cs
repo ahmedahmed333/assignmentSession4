@@ -70,7 +70,12 @@ namespace assignmentSession4
 
             #endregion
             #region Question011
-            PrintBookInfo(pages: 440, title: "Clean Code");
+            //PrintBookInfo(pages: 440, title: "Clean Code");
+
+            #endregion
+
+            #region Question012
+            PrintAllTitles("Clean Code", "Design Patterns", "Refactoring");
             #endregion
 
         }
@@ -136,11 +141,22 @@ namespace assignmentSession4
 
         //}
         #endregion
-
         #region Question011
-        static void PrintBookInfo(string title, int pages = 300)
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine($"book title: {title}, pages:{pages}");
+
+        //}
+        #endregion
+
+        #region Question012
+
+        static void PrintAllTitles(params string[] titles)
         {
-            Console.WriteLine($"book title: {title}, pages:{pages}");
+            foreach (string title in titles)
+            {
+                Console.WriteLine(title);
+            }
 
         }
         #endregion
