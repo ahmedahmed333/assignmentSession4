@@ -48,17 +48,21 @@ namespace assignmentSession4
             //Console.WriteLine(pages); // In question 5, the result was 400 because the method received a copy of the value.
             //                          // With ref, the method modifies the original variable, so the result is 450.
             #endregion
-
             #region Question08
 
-            double[] prices = { 25.5, 40.0 };
-            ReplaceArray(ref prices);
+            //double[] prices = { 25.5, 40.0 };
+            //ReplaceArray(ref prices);
 
 
-            Console.WriteLine(prices.Length); // 3
+            //Console.WriteLine(prices.Length); // 3
 
             #endregion
-
+            #region Question09
+            if (TryGetPrice("Clean Code", out double price))
+            {
+                Console.WriteLine($"the price: {price}");
+            }
+            #endregion
         }
         #region Question04
 
@@ -92,9 +96,28 @@ namespace assignmentSession4
         //}
         #endregion
         #region Question08
-        static void ReplaceArray(ref double[] prices)
+        //static void ReplaceArray(ref double[] prices)
+        //{
+        //    prices = new double[] { 10.0, 12.5, 15.0 };
+        //}
+        #endregion
+
+        #region Question09
+        static bool TryGetPrice(string title, out double price)
         {
-            prices = new double[] { 10.0, 12.5, 15.0 };
+            if (title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
+
+
         }
         #endregion
     }
