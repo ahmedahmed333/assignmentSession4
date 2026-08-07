@@ -64,10 +64,15 @@ namespace assignmentSession4
             //}
             #endregion
             #region Question010
-            PrintBookInfo("Clean Code");
-            PrintBookInfo("Clean Code", 500);
+            //PrintBookInfo("Clean Code");
+            //PrintBookInfo("Clean Code", 500);
+
 
             #endregion
+            #region Question011
+            PrintBookInfo(pages: 440, title: "Clean Code");
+            #endregion
+
         }
         #region Question04
 
@@ -106,7 +111,6 @@ namespace assignmentSession4
         //    prices = new double[] { 10.0, 12.5, 15.0 };
         //}
         #endregion
-
         #region Question09
         //static bool TryGetPrice(string title, out double price)
         //{
@@ -126,11 +130,20 @@ namespace assignmentSession4
         //}
         #endregion
         #region Question010
+        //static void PrintBookInfo(string title, int pages = 300)
+        //{
+        //    Console.WriteLine($"book title: {title}, pages:{pages}");
+
+        //}
+        #endregion
+
+        #region Question011
         static void PrintBookInfo(string title, int pages = 300)
         {
             Console.WriteLine($"book title: {title}, pages:{pages}");
 
         }
         #endregion
+
     }
 }
