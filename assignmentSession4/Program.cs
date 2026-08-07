@@ -17,16 +17,16 @@
             //};
             //Console.WriteLine(newArr[1, 0]); // 1
             #endregion
-            #region Question03 
-            PrintWelcomeMessage();
+            #region Question04
+            PrintBookTitle("Clean Code");
 
             #endregion
         }
-        #region Question03 
+        #region Question04
 
-        static void PrintWelcomeMessage()
+        static void PrintBookTitle(string title)
         {
-            Console.WriteLine("Welcome to the Library!");
+            Console.WriteLine($"Book title: {title}");
         }
         #endregion
     }
