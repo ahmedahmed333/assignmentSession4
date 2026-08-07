@@ -18,15 +18,31 @@
             //Console.WriteLine(newArr[1, 0]); // 1
             #endregion
             #region Question04
-            PrintBookTitle("Clean Code");
+            //PrintBookTitle("Clean Code");
+
+            #endregion
+
+
+            #region Question05
+            int pages = 400;
+            AddBonusPages(pages);
+
+            Console.WriteLine(pages); //I expect to see 400 because int is a value type, so the method receives a copy of the value.
+                                      //The original pages variable remains unchanged.
 
             #endregion
         }
         #region Question04
 
-        static void PrintBookTitle(string title)
+        //static void PrintBookTitle(string title)
+        //{
+        //    Console.WriteLine($"Book title: {title}");
+        //}
+        #endregion
+        #region Question05
+        static void AddBonusPages(int pages)
         {
-            Console.WriteLine($"Book title: {title}");
+            pages = pages + 50;
         }
         #endregion
     }
