@@ -1,4 +1,6 @@
-﻿namespace assignmentSession4
+﻿using System.Diagnostics;
+
+namespace assignmentSession4
 {
     internal class Program
     {
@@ -40,11 +42,21 @@
             #endregion
 
             #region Question07
-            int pages = 400;
-            AddBonusPages(ref pages);
+            //int pages = 400;
+            //AddBonusPages(ref pages);
 
-            Console.WriteLine(pages); // In question 5, the result was 400 because the method received a copy of the value.
-                                      // With ref, the method modifies the original variable, so the result is 450.
+            //Console.WriteLine(pages); // In question 5, the result was 400 because the method received a copy of the value.
+            //                          // With ref, the method modifies the original variable, so the result is 450.
+            #endregion
+
+            #region Question08
+
+            double[] prices = { 25.5, 40.0 };
+            ReplaceArray(ref prices);
+
+
+            Console.WriteLine(prices.Length); // 3
+
             #endregion
 
         }
@@ -67,18 +79,22 @@
         //    prices[0] = prices[0] - 5;
         //}
         #endregion
-
         #region Question06
         static void ApplyDiscount(double[] prices)
         {
             prices[0] = prices[0] - 5;
         }
         #endregion
-
         #region Question07
-        static void AddBonusPages(ref int pages)
+        //static void AddBonusPages(ref int pages)
+        //{
+        //    pages = pages + 50;
+        //}
+        #endregion
+        #region Question08
+        static void ReplaceArray(ref double[] prices)
         {
-            pages = pages + 50;
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
         #endregion
     }
