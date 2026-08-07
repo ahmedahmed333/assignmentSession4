@@ -58,10 +58,15 @@ namespace assignmentSession4
 
             #endregion
             #region Question09
-            if (TryGetPrice("Clean Code", out double price))
-            {
-                Console.WriteLine($"the price: {price}");
-            }
+            //if (TryGetPrice("Clean Code", out double price))
+            //{
+            //    Console.WriteLine($"the price: {price}");
+            //}
+            #endregion
+            #region Question010
+            PrintBookInfo("Clean Code");
+            PrintBookInfo("Clean Code", 500);
+
             #endregion
         }
         #region Question04
@@ -103,20 +108,27 @@ namespace assignmentSession4
         #endregion
 
         #region Question09
-        static bool TryGetPrice(string title, out double price)
+        //static bool TryGetPrice(string title, out double price)
+        //{
+        //    if (title == "Clean Code")
+        //    {
+        //        price = 25.5;
+        //        return true;
+
+        //    }
+        //    else
+        //    {
+        //        price = 0;
+        //        return false;
+        //    }
+
+
+        //}
+        #endregion
+        #region Question010
+        static void PrintBookInfo(string title, int pages = 300)
         {
-            if (title == "Clean Code")
-            {
-                price = 25.5;
-                return true;
-
-            }
-            else
-            {
-                price = 0;
-                return false;
-            }
-
+            Console.WriteLine($"book title: {title}, pages:{pages}");
 
         }
         #endregion
